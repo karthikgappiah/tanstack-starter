@@ -1,7 +1,9 @@
 # To-Do List
 
 1. [x] [config: init react app](https://tanstack.com/start/latest/docs/framework/react/build-from-scratch)
-2. [ ] config: deploy to vercel
+2. [x] config: deploy to vercel
+  - [x] [config: init nitro](https://tanstack.com/start/latest/docs/framework/react/guide/hosting#nitro)
+  - [x] [config: handle client-side routing](https://tanstack.com/router/latest/docs/framework/react/how-to/deploy-to-production#vercel-deployment)
 3. [ ] config: init devcontainer
 4. [ ] config: dockerize app
 5. [ ] config: init tailwind css

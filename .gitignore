@@ -1,8 +1,15 @@
 # Ignored from Git Version Control:
 
-## Package Management
-node_modules/
-
 # App Artifacts
 
 .tanstack/
+
+## Package Management
+
+node_modules/
+
+## Environment Variables
+
+.env
+.env.*
+!.env.example
