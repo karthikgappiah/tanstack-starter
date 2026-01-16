@@ -1,6 +1,6 @@
 # To-Do List
 
-1. [ ] config: init react app
+1. [x] [config: init react app](https://tanstack.com/start/latest/docs/framework/react/build-from-scratch)
 2. [ ] config: deploy to vercel
 3. [ ] config: init devcontainer
 4. [ ] config: dockerize app

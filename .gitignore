@@ -1,0 +1,8 @@
+# Ignored from Git Version Control:
+
+## Package Management
+node_modules/
+
+# App Artifacts
+
+.tanstack/
