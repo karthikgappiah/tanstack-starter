@@ -1,0 +1,13 @@
+{
+  "name": "tanstack-starter",
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.28.1",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Karthik G. Appiah",
+    "url": "https://github.com/karthikgappiah"
+  },
+  "license": "UNLICENSED"
+}
