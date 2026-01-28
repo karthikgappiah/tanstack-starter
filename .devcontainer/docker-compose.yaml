@@ -1,0 +1,41 @@
+# ----------------------------- [ Docker Compose ] ------------------------------
+# [ Location ]: ~/.devcontainer/docker-compose.yaml
+# [ Purpose  ]: For Docker container orchestration.
+# -------------------------------------------------------------------------------
+
+services:
+
+  application:
+    build:
+      context: .. # Locates the project root.
+      dockerfile: .devcontainer/dockerfile # Locates the dockerfile.
+    volumes:
+      - ..:/workspace:cached
+    ports:
+      - "3000:3000"
+    env_file:
+      - ../.env.development # Locates the environment variables.
+    command: tail -f /dev/null # Do not delete; this keep-alive command creates a stable container for building devcontainers.
+    depends_on: # Starts the application
+      database: # iff the database service's
+        condition: service_healthy # condition is healthy.
+
+  database:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    volumes:
+      - db-data:/var/lib/postgresql/data # Persists database data between container restarts.
+    environment:
+      - POSTGRES_DB=application
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=elephant
+    expose:
+      - 5432
+    healthcheck: # Checks if the database is healthy by
+      test: ["CMD", "pg_isready"] # trying to connect
+      interval: 10s # every 10 seconds;
+      timeout: 5s # the try fails after 5 seconds and
+      retries: 5 # the database is considered unhealthy after 5 retries.
+
+volumes: # Provisions a default volume
+  db-data: # for the database

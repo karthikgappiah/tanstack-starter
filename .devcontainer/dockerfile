@@ -1,0 +1,43 @@
+# ------------------------------ [ Docker File ] --------------------------------
+# [ Location ]: ~/.devcontainer/dockerfile
+# [ Purpose  ]: For development environment containerization.
+# -------------------------------------------------------------------------------
+
+# Define versions for:
+# - node (for javascript runtime)
+# - pnpm (for package management)
+
+ARG NODE_VERSION=24.13.0
+ARG PNPM_VERSION=10.28.1
+
+# ===== Base Image =====
+
+# Use slim (more compatible) for glibc and alpine (more minimal) for musl libc.
+FROM node:${NODE_VERSION}-slim AS base
+
+# Enable non-interactive corepack installation for pnpm.
+ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0
+
+# Install with cache mounts for faster rebuilding:
+# - bash (for a command-line interface)
+# - git (for a version control system)
+# - pnpm
+RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
+    --mount=type=cache,target=/var/lib/apt,sharing=locked \
+    apt-get update \
+    && apt-get install -y --no-install-recommends \
+        bash \
+        git \
+        openssh-client \
+    && rm -rf /var/lib/apt/lists/* \
+    && corepack enable && corepack prepare pnpm@${PNPM_VERSION} --activate
+
+# Locate the working directory.
+WORKDIR /workspace
+# Change ownership of the working directory to a non-root user.
+RUN chown -R node:node /workspace
+# Switch to a non-root user for cybersecurity.
+USER node
+
+# Expose which port the development server will listen to.
+EXPOSE 3000

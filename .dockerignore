@@ -1,6 +1,6 @@
-# ----------------------------- [ Untracked Paths ] -----------------------------
-# [ Location ]: ~/.gitignore
-# [ Purpose  ]: To exclude paths from being tracked by Git (version control).
+# ------------------------------ [ Docker Ignore ] ------------------------------
+# [ Location ]: .dockerignore
+# [ Purpose  ]: To exclude paths from the build context to optimize image size.
 # -------------------------------------------------------------------------------
 
 # -------------------------- [ Dependency Management ] --------------------------
@@ -14,6 +14,13 @@ node_modules/
 
 # --------------------------- [ Development Caches ] ----------------------------
 .tanstack/
+
+# ---------------------------- [ Developer Tools ] ------------------------------
+.devcontainer/
+.vscode/
+
+# ----------------------------- [ Version Control ] -----------------------------
+.git/
 
 # ------------------------------ [ System Files ] -------------------------------
 .DS_Store
