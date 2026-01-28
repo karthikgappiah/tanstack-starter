@@ -3,10 +3,28 @@
   "version": "0.0.0",
   "packageManager": "pnpm@10.28.1",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite dev",
+    "build": "vite build"
+  },
+  "type": "module",
+  "dependencies": {
+    "@tanstack/react-router": "^1.157.16",
+    "@tanstack/react-start": "^1.157.16",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.10",
+    "@types/react": "^19.2.10",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.2",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vite-tsconfig-paths": "^6.0.5"
   },
   "author": {
     "name": "Karthik G. Appiah",
+    "email": "karthikgappiah@clonecademy.com",
     "url": "https://github.com/karthikgappiah"
   },
   "license": "UNLICENSED"
