@@ -1,0 +1,22 @@
+# ----------------------------- [ Untracked Paths ] -----------------------------
+# [ Location ]: ~/.gitignore
+# [ Purpose  ]: To exclude paths from being tracked by Git (version control).
+# -------------------------------------------------------------------------------
+
+# --------------------------- [ Development Caches ] ----------------------------
+.tanstack/
+
+# -------------------------- [ Dependency Management ] --------------------------
+
+node_modules/
+.pnpm-store/
+
+# --------------------------- [ Environment Secrets ] ---------------------------
+
+.env
+.env.*
+!.env.example
+
+# ------------------------------ [ System Files ] -------------------------------
+
+.DS_Store
