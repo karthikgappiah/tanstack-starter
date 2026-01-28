@@ -1,6 +1,6 @@
 // ------------------------------- [ Root Layout ] --------------------------------
 // [ Location ]: ~/src/routes/__root.tsx
-// [ Purpose  ]: To wrap every other route in this application.
+// [ Purpose  ]: To wrap all other routes in this application.
 // --------------------------------------------------------------------------------
 
 /// <reference types="vite/client" />
@@ -23,7 +23,7 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'TanStack Start Starter',
+        title: 'TanStack Starter',
       },
     ],
   }),
