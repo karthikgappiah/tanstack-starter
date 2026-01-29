@@ -6,7 +6,7 @@ import { cn } from "@/styles/utilities";
 
 function ItemGroup({ className, ...props }: React.ComponentProps<"div">) {
   return (
-    // biome-ignore lint/a11y/useSemanticElements: <explanation>
+    // biome-ignore lint/a11y/useSemanticElements: TODO
     <div
       role="list"
       data-slot="item-group"

@@ -66,9 +66,9 @@ function InputOTPSlot({
 
 function InputOTPSeparator({ ...props }: React.ComponentProps<"div">) {
   return (
-    // biome-ignore lint/a11y/useFocusableInteractive: <explanation>
-    // biome-ignore lint/a11y/useSemanticElements: <explanation>
-    // biome-ignore lint/a11y/useAriaPropsForRole: <explanation>
+    // biome-ignore lint/a11y/useFocusableInteractive: TODO
+    // biome-ignore lint/a11y/useSemanticElements: TODO
+    // biome-ignore lint/a11y/useAriaPropsForRole: TODO
     <div data-slot="input-otp-separator" role="separator" {...props}>
       <MinusIcon />
     </div>
