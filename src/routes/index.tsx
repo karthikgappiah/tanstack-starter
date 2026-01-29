@@ -11,7 +11,7 @@ export const Route = createFileRoute('/')({
 
 function LandingPage() {
   return (
-    <main>
+    <main className='h-screen flex items-center justify-center'>
       <div>{"Sorry, this website is under construction!"}</div>
     </main>
   )
