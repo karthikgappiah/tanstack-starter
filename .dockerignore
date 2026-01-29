@@ -15,6 +15,9 @@ node_modules/
 # --------------------------- [ Development Caches ] ----------------------------
 .tanstack/
 
+# --------------------------- [ Production Builds ] -----------------------------
+.output/
+
 # ---------------------------- [ Developer Tools ] ------------------------------
 .devcontainer/
 .vscode/
