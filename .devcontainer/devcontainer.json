@@ -1,13 +1,13 @@
 {
-    "name": "TanStack Starter Development Container",
-    "dockerComposeFile": "docker-compose.yaml",
-    "service": "application",
-    "remoteUser": "node",
-    "workspaceFolder": "/workspace",
-    "customizations": {
-      "vscode": {
-        "extensions": ["biomejs.biome", "bradlc.vscode-tailwindcss"]
-      }
-    },
-    "postCreateCommand": "pnpm install --frozen-lockfile --prefer-offline"
-  }
+  "name": "TanStack Starter Development Container",
+  "dockerComposeFile": "docker-compose.yaml",
+  "service": "application",
+  "remoteUser": "node",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": ["biomejs.biome", "bradlc.vscode-tailwindcss"]
+    }
+  },
+  "postCreateCommand": "pnpm install --frozen-lockfile --prefer-offline"
+}
