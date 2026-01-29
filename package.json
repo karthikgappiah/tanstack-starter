@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
+    "biome": "biome check --write",
     "format": "biome format --write",
     "lint": "biome lint --write",
     "ui": "pnpm dlx shadcn@latest"

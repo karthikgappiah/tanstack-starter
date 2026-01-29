@@ -5,14 +5,13 @@
 
 /// <reference types="vite/client" />
 
-import type { ReactNode } from "react";
-
 import {
-  Outlet,
   createRootRoute,
   HeadContent,
+  Outlet,
   Scripts,
 } from "@tanstack/react-router";
+import type { ReactNode } from "react";
 
 import theme from "../styles/theme.css?url";
 
